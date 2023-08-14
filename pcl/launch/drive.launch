@@ -1,0 +1,11 @@
+<launch>
+
+  <node name="rplidar_ros" output="screen" pkg="rplidar_ros" type="client" />
+
+  <node name="passPC" output="screen" pkg="pcl" type="passPC" />
+  <node name="clustering" output="screen" pkg="pcl" type="clustering" />
+  <node name="laneFittings" output="screen" pkg="capstone_" type="drive" />
+
+
+
+</launch>

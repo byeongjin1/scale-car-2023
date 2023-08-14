@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="passPC1" output="screen" pkg="pcl" type="passPC1" />
+  <node name="clusterPC" output="screen" pkg="pcl" type="clustering1" />
+ 
+</launch>

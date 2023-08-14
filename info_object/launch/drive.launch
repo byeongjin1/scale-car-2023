@@ -1,0 +1,9 @@
+<launch>
+
+  <node name="rplidar_ros" output="screen" pkg="rplidar_ros" type="rplidarNodeClient" />
+  <node name="passthrough" output="screen" pkg="info_object" type="passthrough" />
+  <node name="clustering" output="screen" pkg="info_object" type="clustering" />
+  <node name="lane_clustering" output="screen" pkg="controller" type="lane_clustering" />
+
+
+</launch>

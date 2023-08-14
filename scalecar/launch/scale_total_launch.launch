@@ -1,0 +1,20 @@
+<launch>
+    <node name="main_class_run" type="main_class_hsv.py" pkg="scalecar" output="screen"/>
+    <node name="detect_obs" type="detect_clust_obs.py" pkg="scalecar" output="screen"/>
+    <node name="child_sign" type="child_sign.py" pkg="scalecar" output="screen"/>
+    <node name="rabacon_drive" type="rabacon_drive_copy.py" pkg="scalecar" output="screen"/>
+
+    <!-- 라이다 런치 -->
+
+    <node name="clustering" type="clustering" pkg="info_object"/>
+    <node name="passthrough" type="passthrough" pkg="info_object"/>
+    <node name="rplidarNodeClient" type="rplidarNodeClient" pkg="rplidar_ros" />
+<!--  -->
+
+    <include file="$(find racecar)/launch/teleop.launch"/>
+    <include file="$(find aruco_detect)/launch/aruco_detect.launch" />
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_ros)/rviz/rplidar.rviz" />
+
+    
+</launch>

@@ -1,0 +1,8 @@
+<launch>
+  <node name="rplidar_ros" output="screen" pkg="rplidar_ros" type="client" />
+
+
+  <node name="laneFitting" output="screen" pkg="capstone_kcy" type="laneFitting" />
+
+
+</launch>
